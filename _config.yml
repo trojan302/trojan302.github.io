@@ -24,7 +24,3 @@ assets:
   js: assets/js
   fonts: assets/fonts
   img: assets/img
-
-gems: 
-  - jekyll-last-modified-at
-  - jekyll_reading_time
