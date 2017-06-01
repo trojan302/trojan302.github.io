@@ -4,7 +4,7 @@ author: Trian66le Illumination
 description: > # this means to ignore newlines until "baseurl:"
   Betta Dev Indonesia is an IT community based in Tegal City, Magelang City, and Bandung City.
   Our members consist of Web Designer and Graphic Designer.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "https://trojan302.github.io" # the subpath of your site, e.g. /blog
 url: "https://trojan302.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_username: 
