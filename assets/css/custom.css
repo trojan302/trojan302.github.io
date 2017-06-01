@@ -86,3 +86,33 @@
 	text-indent: 50px;
 	padding: 10px 5px;
 }
+
+.tag-cloud {
+  padding: 0;
+  text-align: center; 
+  font-size: 16px;
+  width: 60%;
+  margin: auto;
+}
+.tag-cloud a {
+	display: inline;
+	margin: 0 12px 12px 0;
+}
+
+#archives {
+  padding: 5px;
+}
+
+.archive-group {
+  margin: auto;
+  width: 60%;
+  border-top: 1px solid #e3e3e3;
+}
+
+.archive-group .archive-item {
+  margin-left: 5px;
+}
+
+.post-tags a{
+	display: inline;
+}

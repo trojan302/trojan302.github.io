@@ -25,9 +25,9 @@ published: true
                   <img src="{{ site.assets.img }}{{ post.thumb }}" class="img-responsive" />
                 </div>
                 <div class="col-md-8 caption">
-                  {% for tag in post.tags %}
+                  <!-- {% for tag in post.tags %}
                   <a class="post-tag" href="/tag/{{ tag | prepend: site.baseurl }}"> {{ tag }}</a>
-                  {% endfor %}
+                  {% endfor %} -->
                   <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
                   <time>Publish : {{ post.date | date_to_string }}</time>
                   <p class="post-description">{{ post.meta }}</p>
@@ -55,27 +55,6 @@ published: true
                 <img src="{{ site.assets.img }}/avatar.jpg" class="avatar-full-width img-responsive" />
                 
                 <p>{{ site.description }}</p>
-      
-              </div>
-            </section>
-            
-            <section class="col-md-12 wow fadeIn">
-              <div class="tags">
-      
-                <h3>Tags</h3>
-               <ul class="tag-box inline">
-                {% assign taggin = site.tags %}  
-                  {% if taggin.first[0] == null %}
-                    {% for tagged in taggin %} 
-                      <a href="{{ page.url[tagged] }}" class="btn btn-ada-dark btn-tag">{{ tagged | capitalize }} <span>{{ site.tags[tagged].size }}</span></a>
-                    {% endfor %}
-                  {% else %}
-                    {% for tagged in taggin %} 
-                      <a href="/tag/{{ tagged[0] }}" class="btn btn-ada-dark btn-tag">{{ tagged[0] | capitalize }} <span>({{ tagged[1].size }})</span></a>
-                    {% endfor %}
-                  {% endif %}
-                {% assign taggin = nil %}
-                </ul>
       
               </div>
             </section>
