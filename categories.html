@@ -1,0 +1,31 @@
+---
+layout: default
+page_title: Categories
+author: Trian666le Illumination
+description: Page will display categories on this site.
+keywords: Tutorial,Jekyll,HTML,Web Design,CMS
+published: true
+---
+
+<h3 class="text-center">Post Categories</h3>
+
+<div class="categories-archive">
+
+
+	{% for category in site.categories %}
+	  <div class="archive-group">
+	    {% capture category_name %}{{ category | first }}{% endcapture %}
+	    <div id="#{{ category_name | slugize }}"></div>
+	    <p></p>
+	    
+	    <p class="category-head"> <sup><small><i class="fa fa-link"></i></small></sup> {{ category_name }}</p>
+	    <a name="{{ category_name | slugize }}"></a>
+	    {% for post in site.categories[category_name] %}
+	    <article class="archive-item">
+	      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+	    </article>
+	    {% endfor %}
+	  </div>
+	{% endfor %}
+
+</div>

@@ -1,0 +1,92 @@
+<div id="footer">
+      
+      <div id="links">
+        <div class="container">
+          
+          <div class="col-sm-2">
+            <p class="brand"><span>{{ site.title }}</span></p>
+          </div>
+
+          <div class="col-sm-8">
+
+          <nav class="navbar navbar-ada" role="navigation">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="{{ site.baseurl }}/">Home</a>
+                </li>
+
+                <li class="dropup">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    {% assign taggin = site.tags %}  
+                        {% if taggin.first[0] == null %}
+                          {% for tagged in taggin %} 
+                            <li><a href="{{ page.url[tagged] }}">{{ tagged | capitalize }} <span>{{ site.tags[tagged].size }}</span></a></li>
+                          {% endfor %}
+                        {% else %}
+                          {% for tagged in taggin %} 
+                            <li><a href="/tag/{{ tagged[0] }}">{{ tagged[0] | capitalize }} <span>({{ tagged[1].size }})</span></a></li>
+                          {% endfor %}
+                        {% endif %}
+                      {% assign taggin = nil %}
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="{{ site.baseurl }}/about">About Me</a>
+                </li>
+
+                <li>
+                  <a href="{{ site.baseurl }}/contact">Contact Me</a>
+                </li>
+              </ul>
+          </nav>
+
+          </div>
+
+          <div class="col-md-2">
+            <ul class="list-inline">
+            {% if site.facebook_account %}
+              <li><a target="_blank" href="https://www.facebook.com/{{ site.facebook_account }}"><i class="fa fa-facebook"></i></a></li>
+            {% endif %}
+            {% if site.twitter_username %}
+              <li><a target="_blank" href="https://www.twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i></a></li>
+            {% endif %}
+            {% if site.instagram_account %}
+              <li><a target="_blank" href="https://www.instagram.com/{{ site.instagram_account }}"><i class="fa fa-instagram"></i></a></li>
+            {% endif %}
+            {% if site.github_username %}
+              <li><a target="_blank" href="https://www.github.com/{{ site.github_username }}"><i class="fa fa-github"></i></a></li>
+            {% endif %}
+            {% if site.google_plus_account %}
+              <li><a target="_blank" href="https://plus.google.com/{{ site.google_plus_account }}"><i class="fa fa-google-plus"></i></a></li>
+            {% endif %}
+            {% if site.stackoverflow_account %}
+              <li><a target="_blank" href="https://stackoverflow.com/{{ site.stackoverflow_account }}"><i class="fa fa-stack-overflow"></i></a></li>
+            {% endif %}
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <a id="scroll-to-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="{{ site.baseurl }}/{{ site.assets.js }}/jquery-1.11.3.min.js"></script>
+    <script src="{{ site.baseurl }}/{{ site.assets.js }}/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/{{ site.assets.js }}/owl.carousel.js"></script>
+    <script src="{{ site.baseurl }}/{{ site.assets.js }}/smoothScroll.js"></script>
+    <script src="{{ site.baseurl }}/{{ site.assets.js }}/wow.min.js"></script>
+    
+    <!-- Theme Scripts -->
+    <script src="{{ site.baseurl }}/{{ site.assets.js }}/main.js"></script>
+
+    <!-- Themeswitcher - REMOVE THIS LINE -->
+    <script src="{{ site.baseurl }}/{{ site.assets.js }}/themeswitcher.js"></script>
+    {% include analytics.html %}
+  </body>
+</html>

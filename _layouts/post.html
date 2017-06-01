@@ -1,0 +1,83 @@
+{% include header.html %}
+{% include nav.html %}
+
+<div id="single">
+
+      <div class="container">
+        
+        <div class="post">
+          <img src="{{site.baseurl}}/{{ site.assets.img }}/{{page.thumb}}" class="img-responsive" />
+
+          <div class="caption">
+            <div class="header">
+            {% for tag in page.tags %}
+              <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+              <h1>{{ page.title }}</h1>
+              <span class="post-author"> {{ page.author }}</span>
+            </div>
+
+          <div class="post-content">
+            {{ content }}            
+          </div>
+
+          </div>
+        </div>
+
+        <div class="related">
+          <div class="text-center">
+            <h3>You may also like</h3>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-left">
+            {% if page.previous.url %}
+              <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/'}}">
+               	<h4>{{ page.previous.title }}</h4>
+                {% for tagged in page.previous.tags %}
+                <span class="post-tag">{{ tagged }}</span>
+                {% endfor %}
+                <p>{{ page.previous.meta }}</p>
+              </a>
+            {% endif %}
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-right">
+            {% if page.next.url %}
+              <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/'}}">
+               	<h4>{{ page.next.title }}</h4>
+                {% for tagged in page.next.tags %}
+                <span class="post-tag">{{ tagged }}</span>
+                {% endfor %}
+                <p>{{ page.next.meta }}</p>
+              </a>
+            {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="comments">
+
+          <!-- START DISQUS -->
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES * * */
+              var disqus_shortname = 'gitrojan302';
+              
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+          <!-- END DISQUS -->
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+{% include footer.html %}

@@ -1,0 +1,30 @@
+title: Betta Dev Indonesia
+email: imamalimustofa01@gmail.com
+author: Trian66le Illumination
+description: > # this means to ignore newlines until "baseurl:"
+  Betta Dev Indonesia is an IT community based in Tegal City, Magelang City, and Bandung City.
+  Our members consist of Web Designer and Graphic Designer.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://trojan302.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter_username: 
+github_username:  trojan302
+facebook_account: devil.rose.666
+google_plus_account: 105512857669567156066
+stackoverflow_account: users/6448150/betta-dev?tab=profile
+instagram_account: ucilredbull
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title.html
+
+# Directories Assets
+assets:
+  css: assets/css
+  js: assets/js
+  fonts: assets/fonts
+  img: assets/img
+
+gems: 
+  - jekyll-last-modified-at
+  - jekyll_reading_time
