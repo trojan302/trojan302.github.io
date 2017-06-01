@@ -1,0 +1,88 @@
+/* Add custom styles here */
+.archive-section{
+	list-style: none;
+	text-align: left;
+}
+.tags-title{
+	text-align: center;
+}
+.tags-filter{
+	margin: auto;
+	width: 60%;
+	padding: 20px 10px;
+}
+.tags-filter ul{
+	list-style: none;
+}
+.tag_list .inline{
+	display: inline-block;
+}
+.tags{
+	padding: 3px 5px;
+	border-radius: 3px;
+	background-color: #e3e3e3;
+}
+
+#search-results, .search-results{
+	margin: auto;
+	width: 50%;
+	padding: 20px 10px;
+}
+
+.list-search{
+	list-style: none;
+}
+
+.list-search .author{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.post-content{
+	width: 60%;
+	margin: auto;
+	padding: 20px 10px;
+}
+
+.post-author:before{
+	content: "\f007";
+}
+
+.post-by-tag{
+	width: 60%;
+	margin: auto;
+}
+
+.post-by-tag ul{
+	width: 80%;
+	margin: auto;
+	list-style: none;
+}
+
+.post-by-tag ul .archive_list time{
+	font-size: 18px;
+	display: block;
+	margin-left: -50px;
+}
+
+.post-by-tag ul .archive_list .archive_list_article_link{
+	font-size: 25px;
+}
+
+.post-by-tag .page-head{
+	text-align: center;
+}
+
+.categories-archive{
+	width: 60%;
+	margin: auto;
+}
+
+.categories-archive .category-head{
+	font-size: 28px;
+}
+
+.categories-archive .archive-item{
+	text-indent: 50px;
+	padding: 10px 5px;
+}
