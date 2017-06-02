@@ -28,7 +28,7 @@ thumb: "/photos/jekyll.png"
 
 {% endhighlight%}
 
-In this tutorial we will learn and know the sususan dari directory Jekyll Website. You do not panic first, Jekyll is very neatly manipulate website structure that we need. By default Jekyll has the structure as above.
+In this tutorial we will learn and know the structure of directory Jekyll Website. You do not panic first, Jekyll is very neatly manipulate website structure that we need. By default Jekyll has the structure as above.
 
 If you look at the `_config.yml` file you will see the contents of the file as follows:
 
