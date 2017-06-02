@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="/assets/img/trojan.png">
 
-    <title>How To Create Static Website Using Jekyll</title>
+    <title>Jekyll Directory Structure</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700italic,800,800italic,700,600italic" rel="stylesheet">
@@ -95,7 +95,7 @@
 
           <div class="caption">
             <div class="header">
-              <h1>How To Create Static Website Using Jekyll</h1>
+              <h1>Jekyll Directory Structure</h1>
               <span class="post-author"> Imam Ali Mustofa <div class="post-tags">
   Tags: 
   
@@ -110,62 +110,75 @@
             </div>
 
           <div class="post-content">
-            <p>Create a Static Website with Jekyll and free hosting with Github. Jekyll is a static website generator that we can use to create static blogs for documentation of a project and more. Jekyll uses the ruby programming language, quite easy to learn using Jekyll.</p>
+            
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="p">[</span><span class="nv">Your</span><span class="o">-</span><span class="nv">jekyll</span><span class="o">-</span><span class="nv">site</span><span class="p">]</span>
+<span class="err">├──</span> <span class="nv">_config</span><span class="o">.</span><span class="nv">yml</span>
+<span class="err">├──</span> <span class="nv">Gemfile</span>
+<span class="err">├──</span> <span class="nv">Gemfile</span><span class="o">.</span><span class="nv">lock</span>
+<span class="err">├──</span> <span class="nv">_layouts</span> <span class="o">/</span>
+<span class="err">├──</span> <span class="err">├──</span> <span class="nv">default</span><span class="o">.</span><span class="nv">html</span>
+<span class="err">├──</span> <span class="err">├──</span> <span class="nv">home</span><span class="o">.</span><span class="nv">html</span>
+<span class="err">├──</span> <span class="err">├──</span> <span class="nv">page</span><span class="o">.</span><span class="nv">html</span>
+<span class="err">└──</span> <span class="err">└──</span> <span class="nv">post</span><span class="o">.</span><span class="nv">html</span>
+<span class="err">├──</span> <span class="nv">_posts</span> <span class="o">/</span>
+<span class="o">|</span> <span class="err">└──</span> <span class="mi">2017</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="nv">welcome</span><span class="o">-</span><span class="nv">to</span><span class="o">-</span><span class="nv">jekyll</span><span class="o">.</span><span class="nv">md</span>
+<span class="err">├──</span> <span class="nb">index</span><span class="o">.</span><span class="nv">md</span>
+<span class="err">├──</span> <span class="nv">about</span><span class="o">.</span><span class="nv">md</span></code></pre></figure>
 
-<h3 id="transform-your-plain-text-into-static-websites-and-blogs">Transform your plain text into static websites and blogs.</h3>
+<p>In this tutorial we will learn and know the sususan dari directory Jekyll Website. You do not panic first, Jekyll is very neatly manipulate website structure that we need. By default Jekyll has the structure as above.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Simple</th>
-      <th>Static</th>
-      <th>Blog-aware</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>No more databases, comment moderation, or pesky updates to install—just your content.</td>
-      <td>Markdown (or Textile), Liquid, HTML &amp; CSS go in. Static sites come out ready for deployment.</td>
-      <td>Permalinks, categories, pages, posts, and custom layouts are all first-class citizens here.</td>
-    </tr>
-  </tbody>
-</table>
+<p>If you look at the <code class="highlighter-rouge">_config.yml</code> file you will see the contents of the file as follows:</p>
 
-<h3 id="free-hosting-with-github-pages">Free hosting with GitHub Pages</h3>
-<p>Sick of dealing with hosting companies? GitHub Pages are powered by Jekyll, so you can easily deploy your site using GitHub for free—custom domain name and all.</p>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">Title</span><span class="pi">:</span> <span class="s">Your awesome title</span>
+<span class="s">Email</span><span class="pi">:</span> <span class="s">your-email@domain.com</span>
+<span class="s">Description:&gt;</span> <span class="c1"># this means to ignore newlines until "baseurl:"</span>
+<span class="s">  Write an awesome description for your new site here. You can edit this</span>
+<span class="s">  Line in _config.yml. It will appear in your document head meta (for</span>
+<span class="s">  Google search results) and in your feed.xml site description.</span>
+<span class="s">Baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># the subpath of your site, e.g. / Blog</span>
+<span class="s">Url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># the base hostname &amp; protocol for your site, e.g. Http://example.com</span>
+<span class="s">Twitter_username</span><span class="pi">:</span> <span class="s">jekyllrb</span>
+<span class="s">Github_username</span><span class="pi">:</span> <span class="s">jekyll</span>
 
-<h3 id="step-1">Step 1</h3>
+<span class="c1"># Build settings</span>
+<span class="s">Markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="s">Theme</span><span class="pi">:</span> <span class="s">minima</span>
+<span class="s">Gems</span><span class="pi">:</span>
+<span class="s">  - jekyll-feed</span>
+<span class="s">Exclude</span><span class="pi">:</span>
+<span class="s">  - Gemfile</span>
+<span class="s">  - Gemfile.lock</span></code></pre></figure>
 
-<h4 id="install-ruby-on-your-computer">Install Ruby on Your Computer</h4>
+<h2 id="_configyml">_config.yml</h2>
+<p>Holds the entire configuration for your Jekyll site. This is commonly used for:</p>
 
-<p>Package Management Systems
-If you cannot compile your own Ruby, and you do not want to use a third-party tool, you can use your system’s package manager to install Ruby.</p>
+<p>Set global variables on the site
+Configure collection (Collections) or default
+Specifies the runtime variable we want to run at any time</p>
 
-<p>Certain members in the Ruby community feel very strongly that you should never use a package manager to install Ruby and that you should use tools instead. While the full list of pros and cons is outside of the scope of this page, the most basic reason is that most package managers have older versions of Ruby in their official repositories. If you would like to use the newest Ruby, make sure you use the correct package name, or use the tools described further below instead.</p>
+<h2 id="_drafts">_drafts</h2>
+<p>This directory allows you to post to not publish directly to live sites.</p>
 
-<p>apt (Debian or Ubuntu)
-Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like this:</p>
+<h2 id="_includes">_includes</h2>
+<p>Used to save excerpts from files we will paste into one, or pieces of code or anything to merge on our website.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">~</span> <span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span><span class="o">-</span><span class="n">full</span></code></pre></figure>
+<h2 id="_layouts">_layouts</h2>
+<p>Templates that wrap the content. All HTML on your site such as header, footer and navigation usually stay in the layout. Layout can be used repeatedly.</p>
 
-<p>As of writing, the ruby-full package provides Ruby 1.9.3, which is an old stable release, on Debian and Ubuntu.</p>
+<h2 id="_posts">_posts</h2>
+<p>Contains your blog post written in the Markdown format, or TextTile.</p>
 
-<p>see <a href="https://www.ruby-lang.org/en/documentation/installation/" title="Ruby Installation">Ruby Installation Docs</a></p>
+<h2 id="_data">_data</h2>
+<p><code class="highlighter-rouge">_data</code> contains YAML, JSON and CSV files. The data in this file can be used throughout the Jekyll site as a data bank, or we usually call it the database.</p>
 
-<h3 id="step-2">Step 2</h3>
+<h2 id="_site">_site</h2>
+<p>After Jekyll builds your site with the <code class="highlighter-rouge">bundle exec jekyll serve</code> command, it places all static sites including all your assets in the<code class="highlighter-rouge"> _site</code> directory.</p>
 
-<p>Install RubyGems Packages Management Framework for Ruby <a href="https://rubygems.org/pages/download" title="Installation Page">Installation Page</a></p>
+<h2 id="jekyll-metadata">.jekyll-metadata</h2>
+<p>This file is used by Jekyll’s additional build feature to keep track of files that have changed.</p>
 
-<h3 id="step-3">Step 3</h3>
-<h4 id="get-up-and-running-in-seconds">Get up and running in seconds.</h4>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">~</span> <span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
-<span class="o">~</span> <span class="err">$</span> <span class="n">jekyll</span> <span class="n">new</span> <span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">site</span>
-<span class="o">~</span> <span class="err">$</span> <span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">site</span>
-<span class="o">~/</span><span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">site</span> <span class="err">$</span> <span class="n">bundle</span> <span class="k">exec</span> <span class="n">jekyll</span> <span class="n">serve</span>
-<span class="c"># =&gt; Now browse to http://localhost:4000</span></code></pre></figure>
-
-<p>In the next article we will see directory structures of Jekyll Project. Thanks and see you next time! :D</p>
+<h2 id="other-files--folders">Other Files / Folders</h2>
+<p>You can create another directory as usual, then Jekyll will put the directory you created in the <code class="highlighter-rouge">_site</code> directory after it’s built.</p>
             
           </div>
 
@@ -179,12 +192,8 @@ Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like thi
           <div class="row">
             <div class="col-md-4 text-left">
             
-            </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4 text-right">
-            
-              <a href="/jekyll/Jekyll-Directory-Structure.html">
-               	<h4>Jekyll Directory Structure</h4>
+              <a href="/jekyll/how-to-create-website-using-jekyll.html">
+               	<h4>How To Create Static Website Using Jekyll</h4>
                 
                 <span class="post-tag">Web</span>
                 
@@ -192,8 +201,12 @@ Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like thi
                 
                 <span class="post-tag">Tutorials</span>
                 
-                <p>Know the directory structure in Jekyll and what are the benefits of each directory and its function. Using Jekyll you can ...</p>
+                <p>Create a Static Website with Jekyll and free hosting with Github. Jekyll is a static website generator that we can use to create static blogs for documentation of a project and more. Jekyll uses the ruby programming language, quite easy to learn using Jekyll.</p>
               </a>
+            
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-right">
             
             </div>
           </div>
