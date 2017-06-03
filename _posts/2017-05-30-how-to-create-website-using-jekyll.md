@@ -6,7 +6,7 @@ tags: [Web, Design, Tutorials]
 categories: [Jekyll]
 author: Imam Ali Mustofa
 date: '2017-05-30'
-meta: Membuat sebuah Website Statis dengan jekyll dan Free Hosting dengan Github. Jekyll adalah sebuah static generator yang bisa digunakan untuk membuat blog statis atau untuk membuah website dolumentasi dari sebuah project. Jekyll menggunakan ruby sebagai bahasa pemrogramannya dan menggunakan template engine Liquid. Sangat mudah untuk belajar menggunakan Jekyll.
+meta: Membuat sebuah Website Statis dengan jekyll dan Free Hosting dengan Github. Jekyll adalah sebuah static generator yang bisa digunakan untuk membuat blog statis atau untuk membuat website dokumentasi dari sebuah project. Jekyll menggunakan ruby sebagai bahasa pemrogramannya dan menggunakan template engine Liquid. Sangat mudah untuk belajar menggunakan Jekyll.
 keywords: HTML, CSS, Javascript, Jekyll
 thumb: "/photos/jekyll.png"
 ---
