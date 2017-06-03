@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="">
+    <meta name="description" content="Memahami struktur direktori Jekyll dan apa saja yang bisa anda lakukan dengan menggunakan Jekyll.">
     <meta name="author" content="Imam Ali Mustofa">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="HTML, CSS, Javascript, Jekyll">
     
     <link rel="shortcut icon" href="/assets/img/trojan.png">
 
-    <title>Jekyll Directory Structure</title>
+    <title>Stuktur Direktori Jekyll</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700italic,800,800italic,700,600italic" rel="stylesheet">
@@ -66,19 +66,19 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
-            <a href="/">Home</a>
+            <a href="/">Beranda</a>
           </li>
 
           <li>
-            <a href="/categories">Categories - (1)</a>
+            <a href="/categories">Kategori - (1)</a>
           </li>
 
           <li>
-            <a href="/tags">Tags - (3)</a>
+            <a href="/tags">Tag - (3)</a>
           </li>
 
           <li>
-            <a href="/about">About Me</a>
+            <a href="/about">Tentang Saya</a>
           </li>
 
         </ul>
@@ -95,7 +95,7 @@
 
           <div class="caption">
             <div class="header">
-              <h1>Jekyll Directory Structure</h1>
+              <h1>Stuktur Direktori Jekyll</h1>
               <span class="post-author"> Imam Ali Mustofa <div class="post-tags">
   Tags: 
   
@@ -110,8 +110,9 @@
             </div>
 
           <div class="post-content">
-            
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="p">[</span><span class="nv">Your</span><span class="o">-</span><span class="nv">jekyll</span><span class="o">-</span><span class="nv">site</span><span class="p">]</span>
+            <p>Secara Default Jekyll telah memberikan anda struktur direktori seperti berikut:</p>
+
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="p">[</span><span class="nv">jekyll</span><span class="o">-</span><span class="nv">site</span><span class="p">]</span>
 <span class="err">├──</span> <span class="nv">_config</span><span class="o">.</span><span class="nv">yml</span>
 <span class="err">├──</span> <span class="nv">Gemfile</span>
 <span class="err">├──</span> <span class="nv">Gemfile</span><span class="o">.</span><span class="nv">lock</span>
@@ -125,60 +126,58 @@
 <span class="err">├──</span> <span class="nb">index</span><span class="o">.</span><span class="nv">md</span>
 <span class="err">├──</span> <span class="nv">about</span><span class="o">.</span><span class="nv">md</span></code></pre></figure>
 
-<p>In this tutorial we will learn and know the sususan dari directory Jekyll Website. You do not panic first, Jekyll is very neatly manipulate website structure that we need. By default Jekyll has the structure as above.</p>
+<p>Dalam tutorial ini kita akan mempelajari dan mengetahui struktur direktori Jekyll Website. Anda tidak boleh panik dulu, Jekyll sangat rapi memanipulasi struktur website yang kita butuhkan. Secara default Jekyll memiliki struktur seperti di atas.</p>
 
-<p>If you look at the <code class="highlighter-rouge">_config.yml</code> file you will see the contents of the file as follows:</p>
+<p>Jika Anda melihat file <code class="highlighter-rouge">_config.yml</code> Anda akan melihat isi file sebagai berikut:</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">Title</span><span class="pi">:</span> <span class="s">Your awesome title</span>
-<span class="s">Email</span><span class="pi">:</span> <span class="s">your-email@domain.com</span>
-<span class="s">Description:&gt;</span> <span class="c1"># this means to ignore newlines until "baseurl:"</span>
-<span class="s">  Write an awesome description for your new site here. You can edit this</span>
-<span class="s">  Line in _config.yml. It will appear in your document head meta (for</span>
-<span class="s">  Google search results) and in your feed.xml site description.</span>
-<span class="s">Baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># the subpath of your site, e.g. / Blog</span>
-<span class="s">Url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># the base hostname &amp; protocol for your site, e.g. Http://example.com</span>
-<span class="s">Twitter_username</span><span class="pi">:</span> <span class="s">jekyllrb</span>
-<span class="s">Github_username</span><span class="pi">:</span> <span class="s">jekyll</span>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="nv">Title:</span> <span class="nv">Your</span> <span class="nv">awesome</span> <span class="nv">title</span>
+<span class="nv">Email:</span> <span class="nv">your</span><span class="o">-</span><span class="nv">email@domain</span><span class="o">.</span><span class="nv">com</span>
+<span class="nv">Description:</span><span class="o">&gt;</span> <span class="c1"># this means to ignore newlines until "baseurl:"</span>
+<span class="err">  </span><span class="nv">Write</span> <span class="nv">an</span> <span class="nv">awesome</span> <span class="nv">description</span> <span class="k">for</span> <span class="nv">your</span> <span class="k">new</span> <span class="nv">site</span> <span class="nv">here</span><span class="o">.</span> <span class="nv">You</span> <span class="nv">can</span> <span class="nv">edit</span> <span class="nv">this</span>
+<span class="err">  </span><span class="nv">Line</span> <span class="nv">in</span> <span class="nv">_config</span><span class="o">.</span><span class="nv">yml</span><span class="o">.</span> <span class="nv">It</span> <span class="nv">will</span> <span class="nv">appear</span> <span class="nv">in</span> <span class="nv">your</span> <span class="nv">document</span> <span class="nv">head</span> <span class="nv">meta</span> <span class="p">(</span><span class="k">for</span>
+<span class="err">  </span><span class="nv">Google</span> <span class="nv">search</span> <span class="nv">results</span><span class="p">)</span> <span class="ow">and</span> <span class="nv">in</span> <span class="nv">your</span> <span class="nv">feed</span><span class="o">.</span><span class="nv">xml</span> <span class="nv">site</span> <span class="nv">description</span><span class="o">.</span>
+<span class="nv">Baseurl:</span> <span class="s">""</span> <span class="c1"># the subpath of your site, e.g. / Blog</span>
+<span class="nv">Url:</span> <span class="s">""</span> <span class="c1"># the base hostname &amp; protocol for your site, e.g. Http://example.com</span>
+<span class="nv">Twitter_username:</span> <span class="nv">jekyllrb</span>
+<span class="nv">Github_username:</span> <span class="nv">jekyll</span>
 
 <span class="c1"># Build settings</span>
-<span class="s">Markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
-<span class="s">Theme</span><span class="pi">:</span> <span class="s">minima</span>
-<span class="s">Gems</span><span class="pi">:</span>
-<span class="s">  - jekyll-feed</span>
-<span class="s">Exclude</span><span class="pi">:</span>
-<span class="s">  - Gemfile</span>
-<span class="s">  - Gemfile.lock</span></code></pre></figure>
+<span class="nv">Markdown:</span> <span class="nv">kramdown</span>
+<span class="nv">Theme:</span> <span class="nv">minima</span>
+<span class="nv">Gems:</span>
+<span class="err">  </span><span class="o">-</span> <span class="nv">jekyll</span><span class="o">-</span><span class="nv">feed</span>
+<span class="nv">Exclude:</span>
+<span class="err">  </span><span class="o">-</span> <span class="nv">Gemfile</span>
+<span class="err">  </span><span class="o">-</span> <span class="nv">Gemfile</span><span class="o">.</span><span class="nv">lock</span></code></pre></figure>
 
 <h2 id="_configyml">_config.yml</h2>
-<p>Holds the entire configuration for your Jekyll site. This is commonly used for:</p>
+<p>Memegang seluruh konfigurasi untuk situs Jekyll Anda. Ini biasa digunakan untuk:</p>
 
-<p>Set global variables on the site
-Configure collection (Collections) or default
-Specifies the runtime variable we want to run at any time</p>
+<p>Metapkan variabel global di situs dan Mengkonfigurasi koleksi (Collections) atau Menentukan default variabel runtime yang ingin kita jalankan kapan saja.</p>
 
 <h2 id="_drafts">_drafts</h2>
-<p>This directory allows you to post to not publish directly to live sites.</p>
+<p>Memungkinkan anda untuk membuat posting dan tidak ingin mempublikasikannya secara langsung.</p>
 
 <h2 id="_includes">_includes</h2>
-<p>Used to save excerpts from files we will paste into one, or pieces of code or anything to merge on our website.</p>
+<p>Seperti pada pembuatan website pada umumya, sebuah file dengan ratusan atau bahkan ribuan baris tidak akan di tulis begitu saja pada satu file. anda bisa menggunakan folder <code class="highlighter-rouge">_includes</code> untuk menyimpan file - file potongan yang akan anda sisipkan ke fil utama.</p>
 
 <h2 id="_layouts">_layouts</h2>
-<p>Templates that wrap the content. All HTML on your site such as header, footer and navigation usually stay in the layout. Layout can be used repeatedly.</p>
+<p>Adalah template yang membungkus konten. Semua HTML di situs Anda seperti header, footer dan navigasi biasanya berada di layout. layout bisa digunakan berulang kali.</p>
 
 <h2 id="_posts">_posts</h2>
-<p>Contains your blog post written in the Markdown format, or TextTile.</p>
+<p>Berisi posting blog Anda yang ditulis dalam format Markdown, atau Textile.</p>
 
 <h2 id="_data">_data</h2>
-<p><code class="highlighter-rouge">_data</code> contains YAML, JSON and CSV files. The data in this file can be used throughout the Jekyll site as a data bank, or we usually call it the database.</p>
+<p><code class="highlighter-rouge">_data</code> Berisi file YAML, JSON dan CSV. Data dalam file ini dapat digunakan di seluruh situs Jekyll sebagai bank data, atau biasanya kita menyebutnya database.</p>
 
 <h2 id="_site">_site</h2>
-<p>After Jekyll builds your site with the <code class="highlighter-rouge">bundle exec jekyll serve</code> command, it places all static sites including all your assets in the<code class="highlighter-rouge"> _site</code> directory.</p>
+<p>Setelah Jekyll membangun situs Anda dengan perintah <code class="highlighter-rouge">bundle exec jekyll serve</code>, jekyll akan menempatkan semua situs statis termasuk semua aset Anda di direktori<code class="highlighter-rouge">_site</code>.</p>
 
 <h2 id="jekyll-metadata">.jekyll-metadata</h2>
-<p>This file is used by Jekyll’s additional build feature to keep track of files that have changed.</p>
+<p>File ini digunakan oleh fitur build tambahan Jekyll untuk melacak file yang telah berubah.</p>
 
 <h2 id="other-files--folders">Other Files / Folders</h2>
-<p>You can create another directory as usual, then Jekyll will put the directory you created in the <code class="highlighter-rouge">_site</code> directory after it’s built.</p>
+<p>Anda bisa membuat direktori lain seperti biasa, maka Jekyll akan meletakkan direktori yang Anda buat di direktori <code class="highlighter-rouge">_site</code> setelah dibangun.</p>
             
           </div>
 
@@ -193,7 +192,7 @@ Specifies the runtime variable we want to run at any time</p>
             <div class="col-md-4 text-left">
             
               <a href="/jekyll/how-to-create-website-using-jekyll.html">
-               	<h4>How To Create Static Website Using Jekyll</h4>
+               	<h4>Bagaimana Membuat Web Statis Dengan Jekyll</h4>
                 
                 <span class="post-tag">Web</span>
                 
@@ -201,7 +200,7 @@ Specifies the runtime variable we want to run at any time</p>
                 
                 <span class="post-tag">Tutorials</span>
                 
-                <p>Create a Static Website with Jekyll and free hosting with Github. Jekyll is a static website generator that we can use to create static blogs for documentation of a project and more. Jekyll uses the ruby programming language, quite easy to learn using Jekyll.</p>
+                <p>Membuat sebuah Website Statis dengan jekyll dan Free Hosting dengan Github. Jekyll adalah sebuah static generator yang bisa digunakan untuk membuat blog statis atau untuk membuah website dolumentasi dari sebuah project. Jekyll menggunakan ruby sebagai bahasa pemrogramannya dan menggunakan template engine Liquid. Sangat mudah untuk belajar menggunakan Jekyll.</p>
               </a>
             
             </div>

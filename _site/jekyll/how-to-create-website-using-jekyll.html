@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="">
+    <meta name="description" content="Membuat sebuah Website Statis dengan jekyll dan Free Hosting dengan Github. Jekyll adalah sebuah static generator yang bisa digunakan untuk membuat blog statis atau untuk membuah website dolumentasi dari sebuah project. Jekyll menggunakan ruby sebagai bahasa pemrogramannya dan menggunakan template engine Liquid. Sangat mudah untuk belajar menggunakan Jekyll.">
     <meta name="author" content="Imam Ali Mustofa">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="HTML, CSS, Javascript, Jekyll">
     
     <link rel="shortcut icon" href="/assets/img/trojan.png">
 
-    <title>How To Create Static Website Using Jekyll</title>
+    <title>Bagaimana Membuat Web Statis Dengan Jekyll</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700italic,800,800italic,700,600italic" rel="stylesheet">
@@ -66,19 +66,19 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
-            <a href="/">Home</a>
+            <a href="/">Beranda</a>
           </li>
 
           <li>
-            <a href="/categories">Categories - (1)</a>
+            <a href="/categories">Kategori - (1)</a>
           </li>
 
           <li>
-            <a href="/tags">Tags - (3)</a>
+            <a href="/tags">Tag - (3)</a>
           </li>
 
           <li>
-            <a href="/about">About Me</a>
+            <a href="/about">Tentang Saya</a>
           </li>
 
         </ul>
@@ -95,7 +95,7 @@
 
           <div class="caption">
             <div class="header">
-              <h1>How To Create Static Website Using Jekyll</h1>
+              <h1>Bagaimana Membuat Web Statis Dengan Jekyll</h1>
               <span class="post-author"> Imam Ali Mustofa <div class="post-tags">
   Tags: 
   
@@ -110,54 +110,48 @@
             </div>
 
           <div class="post-content">
-            <p>Create a Static Website with Jekyll and free hosting with Github. Jekyll is a static website generator that we can use to create static blogs for documentation of a project and more. Jekyll uses the ruby programming language, quite easy to learn using Jekyll.</p>
+            <p>Membuat sebuah Website Statis dengan jekyll dan Free Hosting dengan Github. Jekyll adalah sebuah static generator yang bisa digunakan untuk membuat blog statis atau untuk membuah website dolumentasi dari sebuah project. Jekyll menggunakan ruby sebagai bahasa pemrogramannya dan menggunakan template engine Liquid. Sangat mudah untuk belajar menggunakan Jekyll.</p>
 
-<h3 id="transform-your-plain-text-into-static-websites-and-blogs">Transform your plain text into static websites and blogs.</h3>
+<h3 id="transformasi-teks-biasa-anda-menjadi-situs-web-statis-dan-blog">Transformasi Teks Biasa Anda Menjadi Situs Web Statis dan Blog.</h3>
 
 <table>
   <thead>
     <tr>
-      <th>Simple</th>
-      <th>Static</th>
-      <th>Blog-aware</th>
+      <th>Mudah</th>
+      <th>Statis</th>
+      <th>Cocok Untuk Blog</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>No more databases, comment moderation, or pesky updates to install—just your content.</td>
-      <td>Markdown (or Textile), Liquid, HTML &amp; CSS go in. Static sites come out ready for deployment.</td>
-      <td>Permalinks, categories, pages, posts, and custom layouts are all first-class citizens here.</td>
+      <td>Tidak ada Database, mudah untuk mengatur konten dan mudah di install</td>
+      <td>Menggunakan Markdown (atau Textile), Liquid, HTML &amp; CSS. Website anda siap diluncurkan</td>
+      <td>Permalinks, kategori, halaman, posting, dan layout dapat dilakukan disini.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="free-hosting-with-github-pages">Free hosting with GitHub Pages</h3>
-<p>Sick of dealing with hosting companies? GitHub Pages are powered by Jekyll, so you can easily deploy your site using GitHub for free—custom domain name and all.</p>
+<h3 id="free-hosting-dengan-github-pages">Free hosting dengan GitHub Pages</h3>
+<p>Malas berurusan dengan perusahaan hosting? Halaman GitHub didukung oleh Jekyll, sehingga Anda dapat dengan mudah menyebarkan situs Anda menggunakan GitHub untuk nama domain khusus gratis dan semuanya.</p>
 
 <h3 id="step-1">Step 1</h3>
 
-<h4 id="install-ruby-on-your-computer">Install Ruby on Your Computer</h4>
+<h4 id="install-ruby-di-komputer-anda">Install Ruby di Komputer Anda</h4>
 
-<p>Package Management Systems
-If you cannot compile your own Ruby, and you do not want to use a third-party tool, you can use your system’s package manager to install Ruby.</p>
+<p>Untuk menginstall Ruby yang anda perlukan lakukan adalah sebagai berikut:</p>
 
-<p>Certain members in the Ruby community feel very strongly that you should never use a package manager to install Ruby and that you should use tools instead. While the full list of pros and cons is outside of the scope of this page, the most basic reason is that most package managers have older versions of Ruby in their official repositories. If you would like to use the newest Ruby, make sure you use the correct package name, or use the tools described further below instead.</p>
-
-<p>apt (Debian or Ubuntu)
-Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like this:</p>
+<p>Untuk Pegguna Linux (Ubuntu)</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">~</span> <span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span><span class="o">-</span><span class="n">full</span></code></pre></figure>
 
-<p>As of writing, the ruby-full package provides Ruby 1.9.3, which is an old stable release, on Debian and Ubuntu.</p>
-
-<p>see <a href="https://www.ruby-lang.org/en/documentation/installation/" title="Ruby Installation">Ruby Installation Docs</a></p>
+<p>atau anda bisa membaca dokumentasi untuk cara installasinya di <a href="https://www.ruby-lang.org/en/documentation/installation/" title="Ruby Installation">Ruby Installation Docs</a></p>
 
 <h3 id="step-2">Step 2</h3>
 
-<p>Install RubyGems Packages Management Framework for Ruby <a href="https://rubygems.org/pages/download" title="Installation Page">Installation Page</a></p>
+<p>Install RubyGems Packages Management Framework untuk Ruby <a href="https://rubygems.org/pages/download" title="Installation Page">Installation Page</a></p>
 
 <h3 id="step-3">Step 3</h3>
-<h4 id="get-up-and-running-in-seconds">Get up and running in seconds.</h4>
+<h4 id="install-jekyll-dan-bundler">Install Jekyll dan Bundler</h4>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">~</span> <span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
 <span class="o">~</span> <span class="err">$</span> <span class="n">jekyll</span> <span class="n">new</span> <span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">site</span>
@@ -165,7 +159,7 @@ Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like thi
 <span class="o">~/</span><span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">site</span> <span class="err">$</span> <span class="n">bundle</span> <span class="k">exec</span> <span class="n">jekyll</span> <span class="n">serve</span>
 <span class="c"># =&gt; Now browse to http://localhost:4000</span></code></pre></figure>
 
-<p>In the next article we will see directory structures of Jekyll Project. Thanks and see you next time! :D</p>
+<p>Mudah bukan untuk menginstall Jekyll? Nah, pada kesempatan berikutnya kita akan melihat struktur direktori jekyll. Se you next time!</p>
             
           </div>
 
@@ -184,7 +178,7 @@ Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like thi
             <div class="col-md-4 text-right">
             
               <a href="/jekyll/Jekyll-Directory-Structure.html">
-               	<h4>Jekyll Directory Structure</h4>
+               	<h4>Stuktur Direktori Jekyll</h4>
                 
                 <span class="post-tag">Web</span>
                 
@@ -192,7 +186,7 @@ Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like thi
                 
                 <span class="post-tag">Tutorials</span>
                 
-                <p>Know the directory structure in Jekyll and what are the benefits of each directory and its function. Using Jekyll you can ...</p>
+                <p>Memahami struktur direktori Jekyll dan apa saja yang bisa anda lakukan dengan menggunakan Jekyll.</p>
               </a>
             
             </div>

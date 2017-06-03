@@ -1,18 +1,21 @@
 ---
-title: Jekyll Directory Structure
-page_title: Jekyll Directory Structure
+title: Stuktur Direktori Jekyll
+page_title: Stuktur Direktori Jekyll
 layout: post
 tags: [Web, Design, Tutorials]
 categories: [Jekyll]
 author: Imam Ali Mustofa
 date: 2017-06-02
-meta: Know the directory structure in Jekyll and what are the benefits of each directory and its function. Using Jekyll you can ...
+meta: Memahami struktur direktori Jekyll dan apa saja yang bisa anda lakukan dengan menggunakan Jekyll.
+keywords: HTML, CSS, Javascript, Jekyll
 thumb: "/photos/jekyll.png"
 ---
 
+Secara Default Jekyll telah memberikan anda struktur direktori seperti berikut:
+
 {% highlight perl %}
 
-[Your-jekyll-site]
+[jekyll-site]
 ├── _config.yml
 ├── Gemfile
 ├── Gemfile.lock
@@ -26,13 +29,13 @@ thumb: "/photos/jekyll.png"
 ├── index.md
 ├── about.md
 
-{% endhighlight%}
+{% endhighlight %}
 
-In this tutorial we will learn and know the structure of directory Jekyll Website. You do not panic first, Jekyll is very neatly manipulate website structure that we need. By default Jekyll has the structure as above.
+Dalam tutorial ini kita akan mempelajari dan mengetahui struktur direktori Jekyll Website. Anda tidak boleh panik dulu, Jekyll sangat rapi memanipulasi struktur website yang kita butuhkan. Secara default Jekyll memiliki struktur seperti di atas.
 
-If you look at the `_config.yml` file you will see the contents of the file as follows:
+Jika Anda melihat file `_config.yml` Anda akan melihat isi file sebagai berikut:
 
-{% highlight yaml%}
+{% highlight perl %}
 
 Title: Your awesome title
 Email: your-email@domain.com
@@ -57,32 +60,30 @@ Exclude:
 {% endhighlight%}
 
 ## _config.yml
-Holds the entire configuration for your Jekyll site. This is commonly used for:
+Memegang seluruh konfigurasi untuk situs Jekyll Anda. Ini biasa digunakan untuk:
 
-Set global variables on the site
-Configure collection (Collections) or default
-Specifies the runtime variable we want to run at any time
+Metapkan variabel global di situs dan Mengkonfigurasi koleksi (Collections) atau Menentukan default variabel runtime yang ingin kita jalankan kapan saja.
 
 ## _drafts
-This directory allows you to post to not publish directly to live sites.
+Memungkinkan anda untuk membuat posting dan tidak ingin mempublikasikannya secara langsung.
 
 ## _includes
-Used to save excerpts from files we will paste into one, or pieces of code or anything to merge on our website.
+Seperti pada pembuatan website pada umumya, sebuah file dengan ratusan atau bahkan ribuan baris tidak akan di tulis begitu saja pada satu file. anda bisa menggunakan folder `_includes` untuk menyimpan file - file potongan yang akan anda sisipkan ke fil utama.
 
 ## _layouts
-Templates that wrap the content. All HTML on your site such as header, footer and navigation usually stay in the layout. Layout can be used repeatedly.
+Adalah template yang membungkus konten. Semua HTML di situs Anda seperti header, footer dan navigasi biasanya berada di layout. layout bisa digunakan berulang kali.
 
 ## _posts
-Contains your blog post written in the Markdown format, or TextTile.
+Berisi posting blog Anda yang ditulis dalam format Markdown, atau Textile.
 
 ## _data
-`_data` contains YAML, JSON and CSV files. The data in this file can be used throughout the Jekyll site as a data bank, or we usually call it the database.
+`_data` Berisi file YAML, JSON dan CSV. Data dalam file ini dapat digunakan di seluruh situs Jekyll sebagai bank data, atau biasanya kita menyebutnya database.
 
 ## _site
-After Jekyll builds your site with the `bundle exec jekyll serve` command, it places all static sites including all your assets in the` _site` directory.
+Setelah Jekyll membangun situs Anda dengan perintah `bundle exec jekyll serve`, jekyll akan menempatkan semua situs statis termasuk semua aset Anda di direktori`_site`.
 
 ## .jekyll-metadata
-This file is used by Jekyll's additional build feature to keep track of files that have changed.
+File ini digunakan oleh fitur build tambahan Jekyll untuk melacak file yang telah berubah.
 
 ## Other Files / Folders
-You can create another directory as usual, then Jekyll will put the directory you created in the `_site` directory after it's built.
+Anda bisa membuat direktori lain seperti biasa, maka Jekyll akan meletakkan direktori yang Anda buat di direktori `_site` setelah dibangun.
