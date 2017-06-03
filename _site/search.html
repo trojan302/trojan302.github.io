@@ -101,19 +101,27 @@
 <script>
 	window.store = {
     
-      "jekyll-jekyll-directory-structure-html": {
-        "title": "Stuktur Direktori Jekyll",
+      "jekyll-install-jekyll-di-windows-html": {
+        "title": "Install Jekyll di Windows",
         "author": "Imam ali mustofa",
-        "content": "Secara Default Jekyll telah memberikan anda struktur direktori seperti berikut:[jekyll-site]├── _config.yml├── Gemfile├── Gemfile.lock├── _layouts /├── ├── default.html├── ├── home.html├── ├── page.html└── └── post.html├── _posts /| └── 2017-06-02-welcome-to-jekyll.md├── index.md├── about.mdDalam tutorial ini kita akan mempelajari dan mengetahui struktur direktori Jekyll Website. Anda tidak boleh panik dulu, Jekyll sangat rapi memanipulasi struktur website yang kita butuhkan. Secara default Jekyll memiliki struktur seperti di atas.Jika Anda melihat file _config.yml Anda akan melihat isi file sebagai berikut:Title: Your awesome titleEmail: your-email@domain.comDescription:&gt; # this means to ignore newlines until \"baseurl:\"  Write an awesome description for your new site here. You can edit this  Line in _config.yml. It will appear in your document head meta (for  Google search results) and in your feed.xml site description.Baseurl: \"\" # the subpath of your site, e.g. / BlogUrl: \"\" # the base hostname &amp; protocol for your site, e.g. Http://example.comTwitter_username: jekyllrbGithub_username: jekyll# Build settingsMarkdown: kramdownTheme: minimaGems:  - jekyll-feedExclude:  - Gemfile  - Gemfile.lock_config.ymlMemegang seluruh konfigurasi untuk situs Jekyll Anda. Ini biasa digunakan untuk:Metapkan variabel global di situs dan Mengkonfigurasi koleksi (Collections) atau Menentukan default variabel runtime yang ingin kita jalankan kapan saja._draftsMemungkinkan anda untuk membuat posting dan tidak ingin mempublikasikannya secara langsung._includesSeperti pada pembuatan website pada umumya, sebuah file dengan ratusan atau bahkan ribuan baris tidak akan di tulis begitu saja pada satu file. anda bisa menggunakan folder _includes untuk menyimpan file - file potongan yang akan anda sisipkan ke fil utama._layoutsAdalah template yang membungkus konten. Semua HTML di situs Anda seperti header, footer dan navigasi biasanya berada di layout. layout bisa digunakan berulang kali._postsBerisi posting blog Anda yang ditulis dalam format Markdown, atau Textile._data_data Berisi file YAML, JSON dan CSV. Data dalam file ini dapat digunakan di seluruh situs Jekyll sebagai bank data, atau biasanya kita menyebutnya database._siteSetelah Jekyll membangun situs Anda dengan perintah bundle exec jekyll serve, jekyll akan menempatkan semua situs statis termasuk semua aset Anda di direktori_site..jekyll-metadataFile ini digunakan oleh fitur build tambahan Jekyll untuk melacak file yang telah berubah.Other Files / FoldersAnda bisa membuat direktori lain seperti biasa, maka Jekyll akan meletakkan direktori yang Anda buat di direktori _site setelah dibangun.",
-        "url": "/jekyll/Jekyll-Directory-Structure.html"
+        "content": "Bagaimana caranya mengintall Jekyll pada Windows? Caranya cukup mudah, buka Command Prompt -&gt; klik kanan dan pilih \"Run as Administrator\".Step 1Install Chocolatey Package Manager for WindowsCocholatey The package manager for WindowsCopy dan Paste snippet berikut pada Command Prompt:@powershell -NoProfile -ExecutionPolicy Bypass -Command \"iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))\" &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\\chocolatey\\binTutup Command Prompt dan buka kembali untuk memastikan Chocolatey tersedia, ingat jalankan Command Prompt as administrator.Step 2Install Ruby dengan Chocolateyinstall Ruby:choco install ruby -yTutup Command Prompt dan buka kembali untuk memastikan Ruby tersedia, ingat jalankan Command Prompt as administrator.Step 3Install Jekyll dengan gemdan sekarang install Jekyll dan Bundlergem install jekyll bundlerpastikan jekyll terinstall dengan menggunakan perintah sebagai berikutjekyll -vYeah! Sekarang Jekyll ada di komputer anda.",
+        "url": "/jekyll/install-jekyll-di-windows.html"
       }
       ,
     
-      "jekyll-how-to-create-website-using-jekyll-html": {
+      "jekyll-struktur-direktori-jekyll-html": {
+        "title": "Stuktur Direktori Jekyll",
+        "author": "Imam ali mustofa",
+        "content": "Secara Default Jekyll telah memberikan anda struktur direktori seperti berikut:[jekyll-site]├── _config.yml├── Gemfile├── Gemfile.lock├── _layouts /├── ├── default.html├── ├── home.html├── ├── page.html└── └── post.html├── _posts /| └── 2017-06-02-welcome-to-jekyll.md├── index.md├── about.mdDalam tutorial ini kita akan mempelajari dan mengetahui struktur direktori Jekyll Website. Anda tidak boleh panik dulu, Jekyll sangat rapi memanipulasi struktur website yang kita butuhkan. Secara default Jekyll memiliki struktur seperti di atas.Jika Anda melihat file _config.yml Anda akan melihat isi file sebagai berikut:Title: Your awesome titleEmail: your-email@domain.comDescription:&gt; # this means to ignore newlines until \"baseurl:\"  Write an awesome description for your new site here. You can edit this  Line in _config.yml. It will appear in your document head meta (for  Google search results) and in your feed.xml site description.Baseurl: \"\" # the subpath of your site, e.g. / BlogUrl: \"\" # the base hostname &amp; protocol for your site, e.g. Http://example.comTwitter_username: jekyllrbGithub_username: jekyll# Build settingsMarkdown: kramdownTheme: minimaGems:  - jekyll-feedExclude:  - Gemfile  - Gemfile.lock_config.ymlMemegang seluruh konfigurasi untuk situs Jekyll Anda. Ini biasa digunakan untuk:Metapkan variabel global di situs dan Mengkonfigurasi koleksi (Collections) atau Menentukan default variabel runtime yang ingin kita jalankan kapan saja._draftsMemungkinkan anda untuk membuat posting dan tidak ingin mempublikasikannya secara langsung._includesSeperti pada pembuatan website pada umumya, sebuah file dengan ratusan atau bahkan ribuan baris tidak akan di tulis begitu saja pada satu file. anda bisa menggunakan folder _includes untuk menyimpan file - file potongan yang akan anda sisipkan ke fil utama._layoutsAdalah template yang membungkus konten. Semua HTML di situs Anda seperti header, footer dan navigasi biasanya berada di layout. layout bisa digunakan berulang kali._postsBerisi posting blog Anda yang ditulis dalam format Markdown, atau Textile._data_data Berisi file YAML, JSON dan CSV. Data dalam file ini dapat digunakan di seluruh situs Jekyll sebagai bank data, atau biasanya kita menyebutnya database._siteSetelah Jekyll membangun situs Anda dengan perintah bundle exec jekyll serve, jekyll akan menempatkan semua situs statis termasuk semua aset Anda di direktori_site..jekyll-metadataFile ini digunakan oleh fitur build tambahan Jekyll untuk melacak file yang telah berubah.Other Files / FoldersAnda bisa membuat direktori lain seperti biasa, maka Jekyll akan meletakkan direktori yang Anda buat di direktori _site setelah dibangun.",
+        "url": "/jekyll/struktur-direktori-jekyll.html"
+      }
+      ,
+    
+      "jekyll-membuat-website-dengan-jekyll-html": {
         "title": "Bagaimana Membuat Web Statis Dengan Jekyll",
         "author": "Imam ali mustofa",
         "content": "Membuat sebuah Website Statis dengan jekyll dan Free Hosting dengan Github. Jekyll adalah sebuah static generator yang bisa digunakan untuk membuat blog statis atau untuk membuah website dolumentasi dari sebuah project. Jekyll menggunakan ruby sebagai bahasa pemrogramannya dan menggunakan template engine Liquid. Sangat mudah untuk belajar menggunakan Jekyll.Transformasi Teks Biasa Anda Menjadi Situs Web Statis dan Blog.            Mudah      Statis      Cocok Untuk Blog                  Tidak ada Database, mudah untuk mengatur konten dan mudah di install      Menggunakan Markdown (atau Textile), Liquid, HTML &amp; CSS. Website anda siap diluncurkan      Permalinks, kategori, halaman, posting, dan layout dapat dilakukan disini.      Free hosting dengan GitHub PagesMalas berurusan dengan perusahaan hosting? Halaman GitHub didukung oleh Jekyll, sehingga Anda dapat dengan mudah menyebarkan situs Anda menggunakan GitHub untuk nama domain khusus gratis dan semuanya.Step 1Install Ruby di Komputer AndaUntuk menginstall Ruby yang anda perlukan lakukan adalah sebagai berikut:Untuk Pegguna Linux (Ubuntu)~ $ sudo apt-get install ruby-fullatau anda bisa membaca dokumentasi untuk cara installasinya di Ruby Installation DocsStep 2Install RubyGems Packages Management Framework untuk Ruby Installation PageStep 3Install Jekyll dan Bundler~ $ gem install jekyll bundler~ $ jekyll new my-awesome-site~ $ cd my-awesome-site~/my-awesome-site $ bundle exec jekyll serve# =&gt; Now browse to http://localhost:4000Mudah bukan untuk menginstall Jekyll? Nah, pada kesempatan berikutnya kita akan melihat struktur direktori jekyll. Se you next time!",
-        "url": "/jekyll/how-to-create-website-using-jekyll.html"
+        "url": "/jekyll/membuat-website-dengan-jekyll.html"
       }
       
     
@@ -136,23 +144,19 @@
           <nav class="navbar navbar-ada" role="navigation">
               <ul class="nav navbar-nav">
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/">Beranda</a>
                 </li>
 
                  <li>
-                  <a href="/categories">Categories - (1)</a>
+                  <a href="/categories">Kategori - (1)</a>
                 </li>
 
                 <li>
-                  <a href="/tags">Tags - (3)</a>
+                  <a href="/tags">Tag - (3)</a>
                 </li>
 
                 <li>
-                  <a href="/about">About Me</a>
-                </li>
-
-                <li>
-                  <a href="/contact">Contact Me</a>
+                  <a href="/about">Tentang Saya</a>
                 </li>
               </ul>
           </nav>

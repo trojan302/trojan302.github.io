@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="">
-    <meta name="author" content="Trian666le Illumination">
-    <meta name="keywords" content="Tutorial,Jekyll,HTML,Web Design,CMS">
+    <meta name="description" content="Bagaimana caranya mengintall Jekyll pada Windows? Caranya cukup mudah, buka Command Prompt -> klik kanan dan pilih "Run as Administrator"">
+    <meta name="author" content="Imam Ali Mustofa">
+    <meta name="keywords" content="HTML, CSS, Javascript, Jekyll">
     
     <link rel="shortcut icon" href="/assets/img/trojan.png">
 
-    <title>Tags</title>
+    <title>Install Jekyll di Windows</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700italic,800,800italic,700,600italic" rel="stylesheet">
@@ -86,82 +86,129 @@
     </nav>
   </div>
 
-	<div class="tag-cloud">
+<div id="single">
 
-    <a href="#Web">
-      Web
-    </a>
+      <div class="container">
+        
+        <div class="post">
+          <img src="/assets/img//photos/jekyll.png" class="img-responsive" />
 
-    <a href="#Design">
-      Design
-    </a>
+          <div class="caption">
+            <div class="header">
+              <h1>Install Jekyll di Windows</h1>
+              <span class="post-author"> Imam Ali Mustofa <div class="post-tags">
+  Tags: 
+  
+  
+  <a href="/tags/#Web">Web</a>,
+  
+  <a href="/tags/#Design">Design</a>,
+  
+  <a href="/tags/#Tutorials">Tutorials</a>
+  
+</div></span>
+            </div>
 
-    <a href="#Tutorials">
-      Tutorials
-    </a>
+          <div class="post-content">
+            <p>Bagaimana caranya mengintall Jekyll pada Windows? Caranya cukup mudah, buka <code class="highlighter-rouge">Command Prompt -&gt; klik kanan dan pilih "Run as Administrator"</code>.</p>
 
+<h3 id="step-1">Step 1</h3>
+<h4 id="install-chocolatey-package-manager-for-windows">Install Chocolatey Package Manager for Windows</h4>
+
+<p><a href="https://chocolatey.org/">Cocholatey</a> The package manager for Windows
+Copy dan Paste snippet berikut pada Command Prompt:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+</code></pre>
 </div>
 
-<div id="archives">
+<p>Tutup Command Prompt dan buka kembali untuk memastikan Chocolatey tersedia, ingat jalankan Command Prompt as administrator.</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Web">Web (3)</h3>
-    <a name="Web"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/install-jekyll-di-windows.html">Install Jekyll di Windows</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/struktur-direktori-jekyll.html">Stuktur Direktori Jekyll</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/membuat-website-dengan-jekyll.html">Bagaimana Membuat Web Statis Dengan Jekyll</a></h4>
-    </article>
-    
-  </div>
+<h3 id="step-2">Step 2</h3>
+<h4 id="install-ruby-dengan-chocolatey">Install Ruby dengan Chocolatey</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Design">Design (3)</h3>
-    <a name="Design"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/install-jekyll-di-windows.html">Install Jekyll di Windows</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/struktur-direktori-jekyll.html">Stuktur Direktori Jekyll</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/membuat-website-dengan-jekyll.html">Bagaimana Membuat Web Statis Dengan Jekyll</a></h4>
-    </article>
-    
-  </div>
+<p>install Ruby:</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Tutorials">Tutorials (3)</h3>
-    <a name="Tutorials"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/install-jekyll-di-windows.html">Install Jekyll di Windows</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/struktur-direktori-jekyll.html">Stuktur Direktori Jekyll</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/jekyll/membuat-website-dengan-jekyll.html">Bagaimana Membuat Web Statis Dengan Jekyll</a></h4>
-    </article>
-    
-  </div>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>choco install ruby -y
+</code></pre>
 </div>
+
+<p>Tutup Command Prompt dan buka kembali untuk memastikan Ruby tersedia, ingat jalankan Command Prompt as administrator.</p>
+
+<h3 id="step-3">Step 3</h3>
+<h4 id="install-jekyll-dengan-gem">Install Jekyll dengan gem</h4>
+
+<p>dan sekarang install Jekyll dan Bundler</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install jekyll bundler
+</code></pre>
+</div>
+
+<p>pastikan jekyll terinstall dengan menggunakan perintah sebagai berikut</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll -v
+</code></pre>
+</div>
+
+<p>Yeah! Sekarang Jekyll ada di komputer anda.</p>
+            
+          </div>
+
+          </div>
+        </div>
+
+        <div class="related">
+          <div class="text-center">
+            <h3>You may also like</h3>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-left">
+            
+              <a href="/jekyll/struktur-direktori-jekyll.html">
+               	<h4>Stuktur Direktori Jekyll</h4>
+                
+                <span class="post-tag">Web</span>
+                
+                <span class="post-tag">Design</span>
+                
+                <span class="post-tag">Tutorials</span>
+                
+                <img src="/assets/img/photos/jekyll.png" alt="Bagaimana caranya mengintall Jekyll pada Windows? Caranya cukup mudah, buka Command Prompt -> klik kanan dan pilih "Run as Administrator"" class="img-responsive">
+                <p>Memahami struktur direktori Jekyll dan apa saja yang bisa anda laku...</p>
+              </a>
+            
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-right">
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="comments">
+
+          <!-- START DISQUS -->
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES * * */
+              var disqus_shortname = 'gitrojan302';
+              
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+          <!-- END DISQUS -->
+
+        </div>
+
+
+      </div>
+
+    </div>
 
 <div id="footer">
       
@@ -249,3 +296,4 @@
 </script>
   </body>
 </html>
+

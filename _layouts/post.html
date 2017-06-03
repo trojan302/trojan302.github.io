@@ -33,7 +33,8 @@
                 {% for tagged in page.previous.tags %}
                 <span class="post-tag">{{ tagged }}</span>
                 {% endfor %}
-                <p>{{ page.previous.meta }}</p>
+                <img src="{{ site.baseurl }}/{{ site.assets.img }}{{ page.thumb }}" alt="{{ page.meta }}" class="img-responsive">
+                <p>{{ page.previous.meta | truncate: 70 }}</p>
               </a>
             {% endif %}
             </div>
@@ -45,7 +46,8 @@
                 {% for tagged in page.next.tags %}
                 <span class="post-tag">{{ tagged }}</span>
                 {% endfor %}
-                <p>{{ page.next.meta }}</p>
+                <img src="{{ site.baseurl }}/{{ site.assets.img }}{{ page.thumb }}" alt="{{ page.meta }}" class="img-responsive">
+                <p>{{ page.next.meta | truncate: 70 }}</p>
               </a>
             {% endif %}
             </div>

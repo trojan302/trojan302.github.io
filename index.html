@@ -30,7 +30,7 @@ published: true
                   {% endfor %} -->
                   <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
                   <time>Publish : {{ post.date | date_to_string }}</time>
-                  <p class="post-description">{{ post.meta }}</p>
+                  <p class="post-description">{{ post.meta | truncate: 70 }}</p>
                   <a href="{{post.url}}#disqus_thread"><i class="fa fa-comment"></i> Comments</a>
                 </div>
               </div>
